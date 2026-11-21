@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --ksrtc-red: #D32F2F;
+    --ksrtc-dark-red: #B71C1C;
+    --ksrtc-light-red: #FFEBEE;
+    --ksrtc-gold: #F59E0B;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #F8FAFC;
+    color: #1E293B;
+    -webkit-tap-highlight-color: transparent;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.font-kannada {
+  font-family: 'Noto Sans Kannada', 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Custom smooth transitions for card interactions */
+.touch-press {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.touch-press:active {
+  transform: scale(0.98);
+}
+
+/* Custom scrollbar for mobile lists */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Hide scrollbar on mobile horizontal pills */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
